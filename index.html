@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>mad9013 - Layout and Picture Element</title>
+    
+    
+    
+    
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <div class="banner"></div>
+
+
+<div class="wrapper">
+  
+  <section class="col-container clearfix">
+    <article class="feature-article">
+      <h1>Layout and Picture Elements</h1>
+      <p><strong>Task</strong>: Create a flexible grid that substitues different images at different breakpoints.</p>
+      <p><strong>Requirements</strong>:</p>
+      <hr>
+      <pre>
+
+// Layout Requirements
+
+The starting layout should be single column up to 600px wide.
+
+At 600px wide the layout should rearrange into two columns.
+
+At 1024px wide the layout should rearrange into it's final layout of three columns.
+
+If the screensize is larger than 1024px the layout should stay 1024px wide and stay centered.
+
+
+// Picture Requirements
+
+340px
+400px
+600px
+512px
+
+Up to 400px wide the picture src should be - http://placehold.it/400x400
+
+From 400px to 600px the picture src should be - http://placehold.it/600x600
+
+From 600px to 800px the picture src should be - http://placehold.it/400x400
+
+From 800px to 1020px the picture src should be - http://placehold.it/512x512
+
+At 1024px the picture scr should be -  http://placehold.it/340x340
+
+The Fallback should be 600px - http://placehold.it/600x600
+      </pre>
+    </article>
+  </section>
+
+
+<!--<div class="wrapper">-->
+<picture>
+    <source srcset="http://placehold.it/400x400" media="(max-width: 400px)">
+    <source media="(max-width: 600px)" srcset="http://placehold.it/600x600">
+    <source srcset="http://placehold.it/400x400" media="(max-width: 800px)">
+    <source srcset="http://placehold.it/512x512" media="(max-width:1024px)">
+    <source src="http://placehold.it/340x340">
+    <img src="http://placehold.it/340x340" alt="This picture loads on non-supporting browsers.">
+</picture>
+ 
+</div>
+
+<footer class="footer">
+  <p>Copyright MySite 1954<p>
+</footer>
+    
+    
+    
+    
+    
+  </body>
+</html>
